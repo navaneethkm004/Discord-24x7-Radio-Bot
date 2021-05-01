@@ -8,8 +8,8 @@ const sendError = require("../util/error");
 module.exports = {
     info: {
         name: "play",
-        description: "To play songs :D",
-        usage: "<Youtube_Live_URL>",
+        description: "To play music",
+        usage: "<Music_name | Youtube_URL>",
         aliases: ["p"],
     },
 
@@ -70,7 +70,7 @@ module.exports = {
         if (serverQueue) {
             serverQueue.songs.push(song);
             let thing = new MessageEmbed()
-                .setAuthor("Song has been added to queue", "https://github.com/navaneethkm004/my-images/blob/main/giphy.gif?raw=true")
+                .setAuthor("Song has been added to queue", "https://i.ibb.co/qpV4tWk/images.png")
                 .setThumbnail(song.img)
                 .setColor("#fffdd0")
                 .addField("Name", song.title, true)
@@ -87,7 +87,7 @@ module.exports = {
             songs: [],
             volume: 80,
             playing: true,
-            loop: true,
+            loop: false,
         };
         message.client.queue.set(message.guild.id, queueConstruct);
         queueConstruct.songs.push(song);
@@ -96,7 +96,7 @@ module.exports = {
             const queue = message.client.queue.get(message.guild.id);
             if (!song) {
                 sendError(
-                    "Thank you for using my code! [GitHub](https://github.com/navaneethkm004/Discord-24x7-Radio-Bot)",
+                    "Music or stream has ended",
                     message.channel
                 );
                 message.client.queue.delete(message.guild.id);
@@ -127,7 +127,7 @@ module.exports = {
 
             dispatcher.setVolumeLogarithmic(queue.volume / 100);
             let thing = new MessageEmbed()
-                .setAuthor("Started Playing Music!", "https://github.com/navaneethkm004/my-images/blob/main/giphy.gif?raw=true")
+                .setAuthor("Started Playing Music!", "https://i.ibb.co/qpV4tWk/images.png")
                 .setThumbnail(song.img)
                 .setColor("#fffdd0")
                 .addField("Name", song.title, true)

@@ -17,10 +17,10 @@ module.exports = {
     })
 
     let embed = new MessageEmbed()
-      .setAuthor("Commands of " + client.user.username, "https://github.com/navaneethkm004/my-images/blob/main/giphy.gif?raw=true")
+      .setAuthor("Commands of " + client.user.username, "https://i.ibb.co/qpV4tWk/images.png")
       .setColor("#fffdd0")
       .setDescription(allcmds)
-      .setFooter(`Use ${client.config.prefix}help [command] for getting info of that specific command.`,"https://github.com/navaneethkm004/my-images/blob/main/giphy.gif?raw=true")
+      .setFooter(`Use ${client.config.prefix}help [command] for getting info of that specific command.`,"https://i.ibb.co/qpV4tWk/images.png")
 
     if (!args[0]) return message.channel.send(embed)
     else {
@@ -30,7 +30,7 @@ module.exports = {
       if (!command) return message.channel.send("Unknown Command")
       let commandinfo = new MessageEmbed()
         .setTitle("Command: " + command.info.name + " info")
-        .setAuthor(client.user.username, 'https://github.com/navaneethkm004/my-images/blob/main/giphy.gif?raw=true')
+        .setAuthor(client.user.username, 'https://i.ibb.co/qpV4tWk/images.png')
         .setColor("#fffdd0")
         .setDescription(`
               Name: ${command.info.name}

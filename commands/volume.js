@@ -5,7 +5,7 @@ module.exports = {
   info: {
     name: "volume",
     description: "To change the server song volume",
-    usage: "[volume]",
+    usage: "<0/150>",
     aliases: ["v", "vol"],
   },
 
@@ -21,8 +21,8 @@ module.exports = {
     serverQueue.volume = args[0];
     serverQueue.connection.dispatcher.setVolumeLogarithmic(args[0] / 100);
     let xd = new MessageEmbed()
-      .setDescription(`I set the volume to: **${args[0] / 1}/100**`)
-      .setAuthor("Server Volume Manager", "https://github.com/navaneethkm004/my-images/blob/main/giphy.gif?raw=true")
+      .setDescription(`I set the volume to: **${args[0] / 1}/150**`)
+      .setAuthor("Server Volume Manager", "https://i.ibb.co/qpV4tWk/images.png")
       .setColor("#fffdd0")
     return message.channel.send(xd);
   },

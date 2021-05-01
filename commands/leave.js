@@ -6,7 +6,7 @@ module.exports = {
         name: "leave",
         aliases: ["goaway", "disconnect", "bye"],
         description: "Leave The Voice Channel!",
-        usage: "Leave",
+        usage: "",
     },
 
     run: async function (client, message, args) {
@@ -22,7 +22,7 @@ module.exports = {
         }
 
         const Embed = new MessageEmbed()
-            .setAuthor("Leave Voice Channel", "https://github.com/navaneethkm004/my-images/blob/main/giphy.gif?raw=true")
+            .setAuthor("Leave Voice Channel", "https://i.ibb.co/qpV4tWk/images.png")
             .setColor("#fffdd0")
             .setTitle("Success")
             .setDescription("🎶 Left The Voice Channel.")
