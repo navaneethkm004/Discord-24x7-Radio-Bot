@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   info: {
     name: "stats",
-    description: "To check stats and ping of the bot",
+    description: "To check stats of the bot",
     usage: "",
     aliases: [],
   },
